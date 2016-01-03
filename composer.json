@@ -1,0 +1,23 @@
+{
+	"name": "RELIGIS/DuplicateQueriesPanel",
+	"type": "library",
+	"version": "0.0.1",
+	"description": "Addon for showing duplicate DB queries in the Debug Bar.",
+	"keywords": ["nette", "database", "duplicate", "query", "debugbar", "debuging"],
+	"license": ["MIT"],
+	"authors": [
+		{
+			"name": "Jan Petr",
+			"email": "jan.petr@religis.cz"
+		}
+	],
+    "require": {
+	    "php": ">=5.6.0",
+        "tracy/tracy": ">=2.3",
+        "nette/database": ">=2.3",
+        "nette/utils": ">=2.3"
+    },
+	"autoload": {
+		"classmap": ["src/"]
+	}
+}
