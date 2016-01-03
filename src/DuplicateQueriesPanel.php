@@ -107,19 +107,20 @@ class DuplicateQueriesPanel implements IBarPanel
 		$dupliciteQueriesCount = count($dupliciteQueries);
 
 		$tab = '<span title="Nette\Database default">
-				<svg viewBox="0 0 2048 2048"><path fill="'.($dupliciteQueriesCount > 0 ? '#b079d6' : '#aaa').'" d="M1024 896q237 0 443-43t325-127v170q0 69-103 128t-280 93.5-385 34.5-385-34.5-280-93.5-103-128v-170q119 84 325 127t443 43zm0 768q237 0 443-43t325-127v170q0 69-103 128t-280 93.5-385 34.5-385-34.5-280-93.5-103-128v-170q119 84 325 127t443 43zm0-384q237 0 443-43t325-127v170q0 69-103 128t-280 93.5-385 34.5-385-34.5-280-93.5-103-128v-170q119 84 325 127t443 43zm0-1152q208 0 385 34.5t280 93.5 103 128v128q0 69-103 128t-280 93.5-385 34.5-385-34.5-280-93.5-103-128v-128q0-69 103-128t280-93.5 385-34.5z"/>
-				</svg>';
+				<svg viewBox="0 0 2048 2048"><path fill="'.($dupliciteQueriesCount > 0 ? 'red' : '#aaa').'" d="M1024 896q237 0 443-43t325-127v170q0 69-103 128t-280 93.5-385 34.5-385-34.5-280-93.5-103-128v-170q119 84 325 127t443 43zm0 768q237 0 443-43t325-127v170q0 69-103 128t-280 93.5-385 34.5-385-34.5-280-93.5-103-128v-170q119 84 325 127t443 43zm0-384q237 0 443-43t325-127v170q0 69-103 128t-280 93.5-385 34.5-385-34.5-280-93.5-103-128v-170q119 84 325 127t443 43zm0-1152q208 0 385 34.5t280 93.5 103 128v128q0 69-103 128t-280 93.5-385 34.5-385-34.5-280-93.5-103-128v-128q0-69 103-128t280-93.5 385-34.5z"/>
+				</svg>
+				<span class="tracy-label">';
 
 		if($dupliciteQueriesCount > 0)
 		{
-			$tab .= '<span class="tracy-label" style="font-weight: bold; color: red;">'.$dupliciteQueriesCount.' duplicite '.($dupliciteQueriesCount === 1 ? 'query' : 'queries').'</span>';
+			$tab .= $dupliciteQueriesCount.' duplicate '.($dupliciteQueriesCount === 1 ? 'query' : 'queries');
 		}
 		else
 		{
-			$tab .= '<span class="tracy-label">No duplicite queries</span>';
+			$tab .= 'No duplicate queries';
 		}
 
-		$tab .= '</span>';
+		$tab .= '</span></span>';
 
 		return $tab;
 	}
