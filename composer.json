@@ -1,7 +1,6 @@
 {
 	"name": "religis/duplicate-queries-panel",
 	"type": "library",
-	"version": "0.0.1",
 	"description": "Addon for showing duplicate DB queries in the Debug Bar.",
 	"keywords": ["nette", "database", "duplicate", "query", "debugbar", "debuging"],
 	"license": ["MIT"],
