@@ -1,5 +1,5 @@
 {
-	"name": "RELIGIS/DuplicateQueriesPanel",
+	"name": "religis/duplicate-queries-panel",
 	"type": "library",
 	"version": "0.0.1",
 	"description": "Addon for showing duplicate DB queries in the Debug Bar.",
